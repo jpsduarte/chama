@@ -18,6 +18,7 @@ namespace chama.domain.Entities
         public virtual DbSet<Course> Course { get; set; }
         public virtual DbSet<CourseStudent> CourseStudent { get; set; }
         public virtual DbSet<Lecturer> Lecturer { get; set; }
+        public virtual DbSet<Queue> Queue { get; set; }
         public virtual DbSet<Student> Student { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -79,6 +80,31 @@ namespace chama.domain.Entities
                     .IsRequired()
                     .HasMaxLength(200)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Queue>(entity =>
+            {
+                entity.ToTable("QUEUE");
+
+                entity.Property(e => e.QueueId)
+                    .HasColumnName("QueueID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.CourseId).HasColumnName("CourseID");
+
+                entity.Property(e => e.StudentId).HasColumnName("StudentID");
+
+                entity.HasOne(d => d.Course)
+                    .WithMany(p => p.Queue)
+                    .HasForeignKey(d => d.CourseId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__QUEUE__CourseID__4D94879B");
+
+                entity.HasOne(d => d.Student)
+                    .WithMany(p => p.Queue)
+                    .HasForeignKey(d => d.StudentId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__QUEUE__StudentID__4E88ABD4");
             });
 
             modelBuilder.Entity<Student>(entity =>

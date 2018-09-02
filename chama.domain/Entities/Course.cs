@@ -8,6 +8,7 @@ namespace chama.domain.Entities
         public Course()
         {
             CourseStudent = new HashSet<CourseStudent>();
+            Queue = new HashSet<Queue>();
         }
 
         public int CourseId { get; set; }
@@ -16,7 +17,8 @@ namespace chama.domain.Entities
         public int MaxSeats { get; set; }
         public int LecturerId { get; set; }
 
-        public virtual Lecturer Lecturer { get; set; }
-        public virtual ICollection<CourseStudent> CourseStudent { get; set; }
+        public Lecturer Lecturer { get; set; }
+        public ICollection<CourseStudent> CourseStudent { get; set; }
+        public ICollection<Queue> Queue { get; set; }
     }
 }

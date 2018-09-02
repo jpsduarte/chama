@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using chama.api.Models;
 using chama.domain.Entities;
+using chama.domain.Exceptions;
 using chama.domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,8 +19,8 @@ namespace chama.api.Controllers
         private readonly ICourseService _courseService;
         private readonly IStudentService _studentService;
 
-        public CourseController(ChamaContext chamaContext, 
-            ICourseService courseService, 
+        public CourseController(ChamaContext chamaContext,
+            ICourseService courseService,
             IStudentService studentService)
         {
             _chamaContext = chamaContext;
@@ -29,9 +30,9 @@ namespace chama.api.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
-            var courses = _courseService.GetAll();
+            var courses = await _courseService.GetAllAsync();
             var model = new List<CourseModel>();
 
             foreach (var course in courses)
@@ -52,11 +53,11 @@ namespace chama.api.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<CourseModel> Get(int id)
+        public async Task<ActionResult<CourseModel>> Get(int id)
         {
-            var course = _courseService.GetByID(id);
+            var course = await _courseService.GetByIDAsync(id);
 
-            if(course == null)
+            if (course == null)
             {
                 return NotFound("course does not exists");
             }
@@ -67,7 +68,7 @@ namespace chama.api.Controllers
             return model;
         }
 
-        private static void GetCourseExtraInfo(Course course, CourseModel map)
+        private void GetCourseExtraInfo(Course course, CourseModel map)
         {
             bool first = true;
             int ages = 0, count = 0;
@@ -101,52 +102,53 @@ namespace chama.api.Controllers
             }
         }
 
-        // POST api/values
+        // POST api/course
         [HttpPost]
-        public async Task<IActionResult> SignUp([FromBody] int courseID, [FromBody] int studentID)
+        public IActionResult SignUp([FromBody] int courseID, [FromBody] int studentID)
         {
             //try to sign up to a course
 
-            //get course
-            var savedCourse = _courseService.GetByID(courseID);
-
-            if (savedCourse == null)
+            try
             {
-                return NotFound("The course does not exists");
-            }
+                _courseService.SignUp(courseID, studentID);
 
-            if(savedCourse.CourseStudent.Count == savedCourse.MaxSeats)
+                //The endpoint's response should indicate whether signing up was successful.
+                //give the 200 response code
+                return Ok("sign up successfully!");
+            }
+            catch (Exception ex)
             {
-                return BadRequest("The selected course is full. Please, select another one.");
+                if (ex is CourseNotFoundException)
+                {
+                    return NotFound(ex.Message);
+                }
+
+                if (ex is CourseFullException || ex is StudentAlreadyOnCourseException)
+                {
+                    return BadRequest(ex.Message);
+                }
+
+                throw;
             }
+        }
 
-            //check if student isn't already in this course
-            if(savedCourse.CourseStudent.Any(i=> i.StudentId == studentID))
-            {
-                return BadRequest("The selected student is already on this course. Please, select another one.");
-            }
+        // POST api/course
+        [HttpPost]
+        public async Task<IActionResult> SignUpAsync([FromBody] int courseID, [FromBody] int studentID)
+        {
+            //put the request on a queue
+            //Redis, SQS on amazon
 
-            //get student
-            var savedStudent = _studentService.GetByID(studentID);
+            //this task will be in sql server and then the chama.console will wait for requests
 
-            if(savedStudent == null)
-            {
-                return NotFound("The selected student does not exists");
-            }
+            var newTask = new Queue();
+            newTask.CourseId = courseID;
+            newTask.StudentId = studentID;
 
-            var newStudent = new CourseStudent();
-            newStudent.CourseId = courseID;
-            newStudent.StudentId = studentID;
-
-            //sign up student to a course
-            savedCourse.CourseStudent.Add(newStudent);
-           
-            //save changes
+            await _chamaContext.AddAsync(newTask);
             await _chamaContext.SaveChangesAsync();
 
-            //The endpoint's response should indicate whether signing up was successful.
-            //give the 200 response code
-            return Ok("sign up successfully!");
+            return Ok("We have receveid your request and we will inform you by email!");
         }
     }
 }

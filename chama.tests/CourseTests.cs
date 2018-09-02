@@ -6,7 +6,7 @@ namespace chama.tests
     public class CourseTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SignUp()
         {
             
         }
