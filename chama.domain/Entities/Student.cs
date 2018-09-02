@@ -1,10 +1,19 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace chama.domain.Entities
 {
-    public class Student
+    public partial class Student
     {
-        public int StudentID { get; set; }
+        public Student()
+        {
+            CourseStudent = new HashSet<CourseStudent>();
+        }
+
+        public int StudentId { get; set; }
         public string Name { get; set; }
+        public int Age { get; set; }
+
+        public ICollection<CourseStudent> CourseStudent { get; set; }
     }
 }

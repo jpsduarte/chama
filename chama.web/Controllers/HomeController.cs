@@ -8,7 +8,7 @@ using chama.web.Models;
 
 namespace chama.web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public IActionResult Index()
         {

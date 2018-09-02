@@ -3,11 +3,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace chama.tests
 {
     [TestClass]
-    public class UnitTest1
+    public class LecturerTests
     {
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }
