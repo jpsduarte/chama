@@ -149,3 +149,1171 @@ FROM [COURSE] AS [c]" (0723d8ff)
 2018-09-02T15:07:28.9248355-03:00 0HLGGVRNG92UV:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
 2018-09-02T15:07:29.1337317-03:00 0HLGGVRNG92UV:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4811.8525ms (afa2e885)
 2018-09-02T15:07:29.1592226-03:00 0HLGGVRNG92UV:00000001 [INF] Request finished in 5279.8198ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:16:04.1228103-03:00 0HLGH00IHABFD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:16:04.1228103-03:00 0HLGH00IHABFC:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:16:04.1945641-03:00 0HLGH00IHABFC:00000001 [INF] Request finished in 83.5752ms 200  (791a596a)
+2018-09-02T15:16:04.4950119-03:00 0HLGH00IHABFD:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:16:04.9542977-03:00 0HLGH00IHABFD:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:16:06.7061945-03:00 0HLGH00IHABFD:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 2199.9816ms (afa2e885)
+2018-09-02T15:16:06.8518066-03:00 0HLGH00IHABFD:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'CourseStudent' on entity type 'Course' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at chama.domain.Services.ServiceBase`1.GetAll() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\ServiceBase.cs:line 31
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T15:16:07.0889764-03:00 0HLGH00IHABFD:00000001 [INF] Request finished in 2946.0572ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T15:16:39.0239330-03:00 0HLGH00SUC276:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:16:39.0239330-03:00 0HLGH00SUC275:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:16:39.1380857-03:00 0HLGH00SUC275:00000001 [INF] Request finished in 101.5909ms 200  (791a596a)
+2018-09-02T15:16:39.4143369-03:00 0HLGH00SUC276:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:16:39.7780135-03:00 0HLGH00SUC276:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:16:41.4912484-03:00 0HLGH00SUC276:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 2055.1495ms (afa2e885)
+2018-09-02T15:16:41.6488208-03:00 0HLGH00SUC276:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'Lecturer' on entity type 'Course' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at chama.domain.Services.ServiceBase`1.GetAll() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\ServiceBase.cs:line 31
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T15:16:41.8805071-03:00 0HLGH00SUC276:00000001 [INF] Request finished in 2820.4103ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T15:17:04.0696434-03:00 0HLGH014CP28T:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:17:04.0696434-03:00 0HLGH014CP28S:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:17:04.1950549-03:00 0HLGH014CP28T:00000001 [INF] Request finished in 95.3738ms 200  (791a596a)
+2018-09-02T15:17:04.4678378-03:00 0HLGH014CP28S:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:17:04.9225926-03:00 0HLGH014CP28S:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:17:06.8344067-03:00 0HLGH014CP28S:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 2334.804ms (afa2e885)
+2018-09-02T15:17:06.9757547-03:00 0HLGH014CP28S:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'Course' on entity type 'CourseStudent' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at chama.domain.Services.ServiceBase`1.GetAll() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\ServiceBase.cs:line 31
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T15:17:07.2045931-03:00 0HLGH014CP28S:00000001 [INF] Request finished in 3138.4241ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T15:17:45.0639853-03:00 0HLGH01GK51EL:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:17:45.0639847-03:00 0HLGH01GK51EM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:17:45.1641129-03:00 0HLGH01GK51EL:00000001 [INF] Request finished in 86.9627ms 200  (791a596a)
+2018-09-02T15:17:45.4143430-03:00 0HLGH01GK51EM:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:17:45.8239073-03:00 0HLGH01GK51EM:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:17:47.6599957-03:00 0HLGH01GK51EM:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 2234.5846ms (afa2e885)
+2018-09-02T15:17:47.8118546-03:00 0HLGH01GK51EM:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'Course' on entity type 'Lecturer' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at chama.domain.Services.ServiceBase`1.GetAll() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\ServiceBase.cs:line 31
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T15:17:48.0282274-03:00 0HLGH01GK51EM:00000001 [INF] Request finished in 2966.2089ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T15:18:18.3992475-03:00 0HLGH01QI0M6B:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:18:18.3992475-03:00 0HLGH01QI0M6C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:18:18.5506095-03:00 0HLGH01QI0M6B:00000001 [INF] Request finished in 103.2083ms 200  (791a596a)
+2018-09-02T15:18:18.7695106-03:00 0HLGH01QI0M6C:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:18:19.1909894-03:00 0HLGH01QI0M6C:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:18:20.8954631-03:00 0HLGH01QI0M6C:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:18:21.5194283-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:18:21.9642453-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.0621512-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.1180300-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.1635261-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.1769963-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.1872040-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.1977022-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.2069960-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.2146536-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.2266798-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.2361485-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.2518309-03:00 0HLGH01QI0M6C:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3048.3751ms. (50a9e262)
+2018-09-02T15:18:22.2704080-03:00 0HLGH01QI0M6C:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:18:22.3976217-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4320194-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4444489-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4619484-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4728963-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4817874-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.4904128-03:00 0HLGH01QI0M6C:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:18:22.6806183-03:00 0HLGH01QI0M6C:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 3893.2133ms (afa2e885)
+2018-09-02T15:18:22.7073053-03:00 0HLGH01QI0M6C:00000001 [INF] Request finished in 4323.37ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:23:21.8961561-03:00 0HLGH01QI0M6D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44353/api/course   (ca22a1cb)
+2018-09-02T15:23:21.9023896-03:00 0HLGH01QI0M6D:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:23:21.9203715-03:00 0HLGH01QI0M6D:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:23:21.9345408-03:00 0HLGH01QI0M6D:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:23:21.9528041-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:23:21.9674620-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:21.9788977-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:21.9871971-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:21.9970378-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0068055-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0159548-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0252896-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0349968-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0429933-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0543039-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0635759-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.0725286-03:00 0HLGH01QI0M6D:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 146.147ms. (50a9e262)
+2018-09-02T15:23:22.0809258-03:00 0HLGH01QI0M6D:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:23:22.0913484-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1148388-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1300706-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1469375-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1585888-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1831235-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.1961356-03:00 0HLGH01QI0M6D:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:23:22.3495393-03:00 0HLGH01QI0M6D:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 433.52ms (afa2e885)
+2018-09-02T15:23:22.3698009-03:00 0HLGH01QI0M6D:00000001 [INF] Request finished in 468.7624ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:24:08.3645848-03:00 0HLGH052R73TT:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:24:08.3645848-03:00 0HLGH052R73TR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:24:08.3645841-03:00 0HLGH052R73TS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/   (ca22a1cb)
+2018-09-02T15:24:08.4964802-03:00 0HLGH052R73TT:00000001 [INF] Request finished in 127.5456ms 200  (791a596a)
+2018-09-02T15:24:08.7177498-03:00 0HLGH052R73TS:00000001 [INF] Request finished in 374.6008ms 404  (791a596a)
+2018-09-02T15:24:08.7984182-03:00 0HLGH052R73TR:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:24:09.4023850-03:00 0HLGH052R73TR:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:24:11.2745430-03:00 0HLGH052R73TR:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:24:12.0792523-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:24:12.6401948-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.7547285-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.8384981-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.8789186-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.8897114-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.8985330-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.9150032-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.9304869-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.9499237-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.9742219-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:12.9890130-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.0103934-03:00 0HLGH052R73TR:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3590.8256ms. (50a9e262)
+2018-09-02T15:24:13.0353833-03:00 0HLGH052R73TR:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:24:13.2196608-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.2844205-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.2984667-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.3220078-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.3362925-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.3513088-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.3692968-03:00 0HLGH052R73TR:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:13.8283555-03:00 0HLGH052R73TR:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4925.2753ms (afa2e885)
+2018-09-02T15:24:13.9319527-03:00 0HLGH052R73TR:00000001 [INF] Request finished in 5525.6712ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:24:14.2854377-03:00 0HLGH052R73TT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/favicon.ico   (ca22a1cb)
+2018-09-02T15:24:14.2967552-03:00 0HLGH052R73TT:00000002 [INF] Request finished in 12.8756ms 404  (791a596a)
+2018-09-02T15:24:18.4233185-03:00 0HLGH052R73TS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:24:18.4430175-03:00 0HLGH052R73TS:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:24:18.4563351-03:00 0HLGH052R73TS:00000002 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:24:18.4709210-03:00 0HLGH052R73TS:00000002 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:24:18.4802455-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:24:18.4888726-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.4969723-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5046154-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5135004-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5239593-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5330870-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5429361-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5533009-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5616316-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5742471-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5825749-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.5905899-03:00 0HLGH052R73TS:00000002 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 128.8104ms. (50a9e262)
+2018-09-02T15:24:18.5987492-03:00 0HLGH052R73TS:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:24:18.6064545-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6144032-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6235441-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6330280-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6432901-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6520061-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.6653188-03:00 0HLGH052R73TS:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:24:18.7739413-03:00 0HLGH052R73TS:00000002 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 325.6274ms (afa2e885)
+2018-09-02T15:24:18.7836287-03:00 0HLGH052R73TS:00000002 [INF] Request finished in 359.4111ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:25:19.8376759-03:00 0HLGH05O5ON60:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:25:19.9970951-03:00 0HLGH05O5ON60:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:25:20.2281957-03:00 0HLGH05O5ON60:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:25:21.6718517-03:00 0HLGH05O5ON60:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:25:22.1776537-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:25:22.5808380-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.6578513-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7040295-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7341595-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7380053-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7403127-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7449391-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7481496-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7509322-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7570171-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7594568-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.7695987-03:00 0HLGH05O5ON60:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2534.1777ms. (50a9e262)
+2018-09-02T15:25:22.7789033-03:00 0HLGH05O5ON60:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:25:22.8838306-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9185821-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9256094-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9419227-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9464439-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9518979-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:22.9558626-03:00 0HLGH05O5ON60:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:25:23.1368993-03:00 0HLGH05O5ON60:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 3133.0981ms (afa2e885)
+2018-09-02T15:25:23.1550926-03:00 0HLGH05O5ON60:00000001 [INF] Request finished in 3328.0495ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:26:15.4829617-03:00 0HLGH068NM0MD:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:26:15.4829623-03:00 0HLGH068NM0MC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:26:15.4829623-03:00 0HLGH068NM0ME:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:26:15.6223095-03:00 0HLGH068NM0MD:00000001 [INF] Request finished in 93.2849ms 200  (791a596a)
+2018-09-02T15:26:15.9539065-03:00 0HLGH068NM0MC:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:26:15.9539065-03:00 0HLGH068NM0ME:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:26:16.4121309-03:00 0HLGH068NM0ME:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:26:16.4121400-03:00 0HLGH068NM0MC:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:26:18.1590235-03:00 0HLGH068NM0MC:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:26:18.1590235-03:00 0HLGH068NM0ME:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:26:18.9810801-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:26:18.9810801-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:26:19.4311091-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.4329836-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.5459692-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.5468821-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6146718-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6165675-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6515931-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6736006-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6895202-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.6907555-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7041117-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7265206-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7370503-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7446131-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7546596-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7608303-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7715186-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7772352-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7887030-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.7946557-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.8015997-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.8123467-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.8296077-03:00 0HLGH068NM0MC:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3403.7093ms. (50a9e262)
+2018-09-02T15:26:19.8296010-03:00 0HLGH068NM0ME:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3401.1912ms. (50a9e262)
+2018-09-02T15:26:19.8524248-03:00 0HLGH068NM0ME:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:26:19.8524363-03:00 0HLGH068NM0MC:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:26:19.9735118-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:19.9746100-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0170808-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0184325-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0372023-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0383445-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0692938-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0729415-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0943719-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.0975113-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.1232384-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.1248998-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.1471198-03:00 0HLGH068NM0ME:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.1500865-03:00 0HLGH068NM0MC:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:26:20.2616511-03:00 0HLGH068NM0ME:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4291.0201ms (afa2e885)
+2018-09-02T15:26:20.2640780-03:00 0HLGH068NM0MC:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4303.9561ms (afa2e885)
+2018-09-02T15:26:20.3609038-03:00 0HLGH068NM0MC:00000001 [INF] Request finished in 4823.5889ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:26:20.3624511-03:00 0HLGH068NM0ME:00000001 [INF] Request finished in 4836.3486ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:30:46.1005190-03:00 0HLGH08PC5KUF:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T15:30:46.1005190-03:00 0HLGH08PC5KUG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T15:30:46.2324531-03:00 0HLGH08PC5KUF:00000001 [INF] Request finished in 118.7886ms 200  (791a596a)
+2018-09-02T15:30:47.0642569-03:00 0HLGH08PC5KUG:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:30:47.7452904-03:00 0HLGH08PC5KUF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/1   (ca22a1cb)
+2018-09-02T15:30:47.7866521-03:00 0HLGH08PC5KUF:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:30:47.8837243-03:00 0HLGH08PC5KUG:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T15:30:47.9302883-03:00 0HLGH08PC5KUF:00000002 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" with arguments (["1"]) - Validation state: Valid (4e3479ed)
+2018-09-02T15:30:49.7478357-03:00 0HLGH08PC5KUF:00000002 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:30:49.7478357-03:00 0HLGH08PC5KUG:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:30:50.3793796-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.3793772-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[CourseID], [c].[Description], [c].[LecturerID], [c].[MaxSeats], [c].[Name]
+FROM [COURSE] AS [c]" (0723d8ff)
+2018-09-02T15:30:50.6054439-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.6065873-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.7070729-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.7081077-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.7792674-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.7803825-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8215945-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8230705-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8345546-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8541877-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8564679-03:00 0HLGH08PC5KUF:00000002 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2894.2173ms. (50a9e262)
+2018-09-02T15:30:50.8855481-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.8961760-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.9044857-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.9127712-03:00 0HLGH08PC5KUF:00000002 [INF] Executing ObjectResult, writing value of type '"chama.api.Models.CourseModel"'. (8a1b66c8)
+2018-09-02T15:30:50.9219291-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.9324031-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:50.9512200-03:00 0HLGH08PC5KUG:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3060.7237ms. (50a9e262)
+2018-09-02T15:30:50.9602861-03:00 0HLGH08PC5KUG:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T15:30:51.0506460-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.0515781-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.0902146-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.0915906-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1019450-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1128591-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1203695-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1295201-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1388869-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1523644-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1537010-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1729502-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1790405-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.1892115-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.2047205-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.2108398-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.2322358-03:00 0HLGH08PC5KUG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.2642362-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.3780043-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("21"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.4562584-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("15"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.5887153-03:00 0HLGH08PC5KUG:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4372.463ms (afa2e885)
+2018-09-02T15:30:51.5945582-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.6302443-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.6320289-03:00 0HLGH08PC5KUG:00000001 [INF] Request finished in 5540.329ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:30:51.6478090-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.6614501-03:00 0HLGH08PC5KUF:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:30:51.7240732-03:00 0HLGH08PC5KUF:00000002 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 3891.3726ms (afa2e885)
+2018-09-02T15:30:51.7771085-03:00 0HLGH08PC5KUF:00000002 [INF] Request finished in 3987.1424ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:31:48.9707963-03:00 0HLGH08PC5KUG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/1   (ca22a1cb)
+2018-09-02T15:31:48.9789387-03:00 0HLGH08PC5KUG:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:31:48.9865722-03:00 0HLGH08PC5KUG:00000002 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" with arguments (["1"]) - Validation state: Valid (4e3479ed)
+2018-09-02T15:31:48.9931975-03:00 0HLGH08PC5KUG:00000002 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:31:49.0057543-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0152425-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0240315-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0325880-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0405252-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0463625-03:00 0HLGH08PC5KUG:00000002 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 54.9074ms. (50a9e262)
+2018-09-02T15:31:49.0512365-03:00 0HLGH08PC5KUG:00000002 [INF] Executing ObjectResult, writing value of type '"chama.api.Models.CourseModel"'. (8a1b66c8)
+2018-09-02T15:31:49.0591005-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0680894-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0776059-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0875275-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.0980172-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1075434-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1168382-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1245822-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1333531-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1413512-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1494441-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1575148-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.1729574-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.2464711-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.2646220-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.4077757-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.4304618-03:00 0HLGH08PC5KUG:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:49.4656565-03:00 0HLGH08PC5KUG:00000002 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 465.7987ms (afa2e885)
+2018-09-02T15:31:49.5347008-03:00 0HLGH08PC5KUG:00000002 [INF] Request finished in 503.7053ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T15:31:58.6699221-03:00 0HLGH08PC5KUG:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/2   (ca22a1cb)
+2018-09-02T15:31:58.6866664-03:00 0HLGH08PC5KUG:00000003 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T15:31:58.6962481-03:00 0HLGH08PC5KUG:00000003 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" with arguments (["2"]) - Validation state: Valid (4e3479ed)
+2018-09-02T15:31:58.7027840-03:00 0HLGH08PC5KUG:00000003 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T15:31:58.7157780-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7236790-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7312345-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7420665-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7516664-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7605913-03:00 0HLGH08PC5KUG:00000003 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 57.7461ms. (50a9e262)
+2018-09-02T15:31:58.7671784-03:00 0HLGH08PC5KUG:00000003 [INF] Executing ObjectResult, writing value of type '"chama.api.Models.CourseModel"'. (8a1b66c8)
+2018-09-02T15:31:58.7781686-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.7885050-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8064229-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8142296-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8224046-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8320093-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8418512-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8508243-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8600987-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8681198-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8760431-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8839549-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.8931937-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.9016561-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[LecturerID], [e].[Name]
+FROM [LECTURER] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.9105707-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.9187608-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.9276977-03:00 0HLGH08PC5KUG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T15:31:58.9427449-03:00 0HLGH08PC5KUG:00000003 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 249.502ms (afa2e885)
+2018-09-02T15:31:58.9614482-03:00 0HLGH08PC5KUG:00000003 [INF] Request finished in 288.93ms 200 application/json; charset=utf-8 (791a596a)

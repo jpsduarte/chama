@@ -15,7 +15,6 @@ namespace chama.api.Models
         public int MaxSeats { get; set; }
 
         public Lecturer Lecturer { get; set; }
-        public ICollection<CourseStudent> CourseStudent { get; set; }
 
         //custom properties
         public int MinimumAge { get; set; }
@@ -31,7 +30,6 @@ namespace chama.api.Models
             MaxSeats = course.MaxSeats;
 
             Lecturer = course.Lecturer;
-            CourseStudent = course.CourseStudent;
         }
     }
 }

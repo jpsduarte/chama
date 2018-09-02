@@ -13,6 +13,6 @@ namespace chama.domain.Entities
         public int LecturerId { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Course> Course { get; set; }
+        public virtual ICollection<Course> Course { get; set; }
     }
 }

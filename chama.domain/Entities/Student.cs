@@ -14,6 +14,6 @@ namespace chama.domain.Entities
         public string Name { get; set; }
         public int Age { get; set; }
 
-        public ICollection<CourseStudent> CourseStudent { get; set; }
+        public virtual ICollection<CourseStudent> CourseStudent { get; set; }
     }
 }
