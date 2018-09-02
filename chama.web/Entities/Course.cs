@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace chama.domain.Entities
+namespace chama.web.Entities
 {
     public partial class Course
     {
@@ -13,7 +13,7 @@ namespace chama.domain.Entities
         public int CourseId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int MaxSeats { get; set; }
+        public int? MaxSeats { get; set; }
         public int LecturerId { get; set; }
 
         public Lecturer Lecturer { get; set; }

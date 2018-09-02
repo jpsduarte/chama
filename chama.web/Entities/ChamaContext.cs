@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace chama.domain.Entities
+namespace chama.web.Entities
 {
     public partial class ChamaContext : DbContext
     {
@@ -43,7 +43,7 @@ namespace chama.domain.Entities
                     .WithMany(p => p.Course)
                     .HasForeignKey(d => d.LecturerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__COURSE__Lecturer__44FF419A");
+                    .HasConstraintName("FK__COURSE__Lecturer__3A81B327");
             });
 
             modelBuilder.Entity<CourseStudent>(entity =>
@@ -60,13 +60,13 @@ namespace chama.domain.Entities
                     .WithMany(p => p.CourseStudent)
                     .HasForeignKey(d => d.CourseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__COURSE_ST__Cours__49C3F6B7");
+                    .HasConstraintName("FK__COURSE_ST__Cours__3F466844");
 
                 entity.HasOne(d => d.Student)
                     .WithMany(p => p.CourseStudent)
                     .HasForeignKey(d => d.StudentId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__COURSE_ST__Stude__4AB81AF0");
+                    .HasConstraintName("FK__COURSE_ST__Stude__403A8C7D");
             });
 
             modelBuilder.Entity<Lecturer>(entity =>
