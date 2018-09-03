@@ -17,8 +17,8 @@ namespace chama.domain.Entities
         public int MaxSeats { get; set; }
         public int LecturerId { get; set; }
 
-        public Lecturer Lecturer { get; set; }
-        public ICollection<CourseStudent> CourseStudent { get; set; }
-        public ICollection<Queue> Queue { get; set; }
+        public virtual Lecturer Lecturer { get; set; }
+        public virtual ICollection<CourseStudent> CourseStudent { get; set; }
+        public virtual ICollection<Queue> Queue { get; set; }
     }
 }

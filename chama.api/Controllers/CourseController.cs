@@ -104,7 +104,7 @@ namespace chama.api.Controllers
 
         // POST api/course
         [HttpPost]
-        public IActionResult SignUp([FromBody] int courseID, [FromBody] int studentID)
+        public IActionResult SignUp([FromBody] int courseID, int studentID)
         {
             //try to sign up to a course
 
@@ -134,7 +134,7 @@ namespace chama.api.Controllers
 
         // POST api/course
         [HttpPost]
-        public async Task<IActionResult> SignUpAsync([FromBody] int courseID, [FromBody] int studentID)
+        public async Task<IActionResult> SignUpAsync([FromBody] int courseID, int studentID)
         {
             //put the request on a queue
             //Redis, SQS on amazon

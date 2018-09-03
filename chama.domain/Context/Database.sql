@@ -37,6 +37,15 @@ CREATE TABLE COURSE_STUDENT
 	foreign key (StudentID) references STUDENT(StudentID)
 )
 
+CREATE TABLE [QUEUE]
+(
+	QueueID int NOT NULL primary key,
+	CourseID int NOT NULL, 
+	StudentID int NOT NULL,
+	foreign key (CourseID) references COURSE(CourseID),
+	foreign key (StudentID) references STUDENT(StudentID)
+)
+
 INSERT INTO LECTURER values ('Rolanda Hooch');
 INSERT INTO LECTURER values ('Rúbeo Hagrid');
 INSERT INTO LECTURER values ('Sirius Black');

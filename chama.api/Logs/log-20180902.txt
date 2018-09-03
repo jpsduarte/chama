@@ -1317,3 +1317,470 @@ FROM [COURSE_STUDENT] AS [e]
 WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
 2018-09-02T15:31:58.9427449-03:00 0HLGH08PC5KUG:00000003 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 249.502ms (afa2e885)
 2018-09-02T15:31:58.9614482-03:00 0HLGH08PC5KUG:00000003 [INF] Request finished in 288.93ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T16:32:29.9851867-03:00 0HLGH1B987SSN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/2   (ca22a1cb)
+2018-09-02T16:32:30.1236223-03:00 0HLGH1B987SSN:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:32:30.1696557-03:00 0HLGH1B987SSN:00000001 [INF] Request finished in 194.833ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:32:46.9563251-03:00 0HLGH1BE8L1QA:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:32:46.9563251-03:00 0HLGH1BE8L1Q9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:32:46.9563251-03:00 0HLGH1BE8L1Q8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/2   (ca22a1cb)
+2018-09-02T16:32:47.1621484-03:00 0HLGH1BE8L1QA:00000001 [INF] Request finished in 156.4694ms 200  (791a596a)
+2018-09-02T16:32:47.6445977-03:00 0HLGH1BE8L1Q8:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:32:47.6460558-03:00 0HLGH1BE8L1Q9:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:32:47.8425195-03:00 0HLGH1BE8L1Q9:00000001 [INF] Request finished in 792.8129ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:32:47.8523312-03:00 0HLGH1BE8L1Q8:00000001 [INF] Request finished in 792.802ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:32:50.7935793-03:00 0HLGH1BE8L1QA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course/2   (ca22a1cb)
+2018-09-02T16:32:50.8891680-03:00 0HLGH1BE8L1QA:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:32:50.9074307-03:00 0HLGH1BE8L1QA:00000002 [INF] Request finished in 109.1641ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:32:55.8411407-03:00 0HLGH1BE8L1Q9:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:32:55.9534241-03:00 0HLGH1BE8L1Q9:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:32:55.9754908-03:00 0HLGH1BE8L1Q9:00000002 [INF] Request finished in 125.5207ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:33:24.6854645-03:00 0HLGH1BE8L1Q8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/courses   (ca22a1cb)
+2018-09-02T16:33:24.7873905-03:00 0HLGH1BE8L1Q8:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:33:24.8140195-03:00 0HLGH1BE8L1Q8:00000002 [INF] Request finished in 117.2479ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:33:27.3091321-03:00 0HLGH1BE8L1QA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:33:27.4094045-03:00 0HLGH1BE8L1QA:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:33:27.4306713-03:00 0HLGH1BE8L1QA:00000003 [INF] Request finished in 115.5032ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:33:59.9902284-03:00 0HLGH1C423CI9:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:33:59.9902284-03:00 0HLGH1C423CIA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:34:00.0994106-03:00 0HLGH1C423CI9:00000001 [INF] Request finished in 119.0633ms 200  (791a596a)
+2018-09-02T16:34:00.4148785-03:00 0HLGH1C423CIA:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:34:00.5633088-03:00 0HLGH1C423CIA:00000001 [INF] Request finished in 565.6757ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:34:52.7675781-03:00 0HLGH1CJPET32:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:34:52.7675781-03:00 0HLGH1CJPET33:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:34:52.8310789-03:00 0HLGH1CJPET33:00000001 [INF] Request finished in 77.7155ms 200  (791a596a)
+2018-09-02T16:34:53.1553220-03:00 0HLGH1CJPET32:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Action 'chama.api.Controllers.CourseController.SignUp (chama.api)' has more than one parameter that was specified or inferred as bound from request body. Only one parameter per action may be bound from body. Inspect the following parameters, and use 'FromQueryAttribute' to specify bound from query, 'FromRouteAttribute' to specify bound from route, and 'FromBodyAttribute' for parameters to be bound from body:
+int courseID
+int studentID
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.InferParameterBindingSources(ActionModel actionModel)
+   at Microsoft.AspNetCore.Mvc.Internal.ApiBehaviorApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:34:53.2803272-03:00 0HLGH1CJPET32:00000001 [INF] Request finished in 509.7419ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:35:26.2096958-03:00 0HLGH1CTO5T45:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:35:26.2096958-03:00 0HLGH1CTO5T44:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:35:26.3100450-03:00 0HLGH1CTO5T44:00000001 [INF] Request finished in 92.6226ms 200  (791a596a)
+2018-09-02T16:35:26.5603337-03:00 0HLGH1CTO5T45:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T16:35:27.0199134-03:00 0HLGH1CTO5T45:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T16:35:35.2343096-03:00 0HLGH1CTO5T45:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 8662.2534ms (afa2e885)
+2018-09-02T16:35:35.5018214-03:00 0HLGH1CTO5T45:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'CourseStudent' on entity type 'Course' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include[TEntity,TProperty](IQueryable`1 source, Expression`1 navigationPropertyPath)
+   at chama.domain.Services.CourseService.GetAllAsync() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\CourseService.cs:line 23
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 35
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:35:35.7774393-03:00 0HLGH1CTO5T45:00000001 [INF] Request finished in 9531.9197ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:36:00.6268616-03:00 0HLGH1D80G7HK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:36:00.6268616-03:00 0HLGH1D80G7HJ:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:36:00.7166909-03:00 0HLGH1D80G7HJ:00000001 [INF] Request finished in 92.4783ms 200  (791a596a)
+2018-09-02T16:36:01.1414357-03:00 0HLGH1D80G7HK:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T16:36:01.4672974-03:00 0HLGH1D80G7HK:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T16:36:42.2503488-03:00 0HLGH1DKDGQBQ:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:36:42.2503488-03:00 0HLGH1DKDGQBR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:36:42.4095326-03:00 0HLGH1DKDGQBQ:00000001 [INF] Request finished in 164.5364ms 200  (791a596a)
+2018-09-02T16:36:42.6392893-03:00 0HLGH1DKDGQBR:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T16:36:43.0478134-03:00 0HLGH1DKDGQBR:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T16:36:48.4493946-03:00 0HLGH1DKDGQBR:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 5799.81ms (afa2e885)
+2018-09-02T16:36:48.6326905-03:00 0HLGH1DKDGQBR:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Navigation property 'Course' on entity type 'Lecturer' is not virtual. UseLazyLoadingProxies requires all entity types to be public, unsealed, have virtual navigation properties, and have a public or protected constructor.
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyBindingRewriter.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include[TEntity,TProperty](IQueryable`1 source, Expression`1 navigationPropertyPath)
+   at chama.domain.Services.CourseService.GetAllAsync() in C:\Users\joaod\Documents\Git\chama\chama\chama.domain\Services\CourseService.cs:line 23
+   at chama.api.Controllers.CourseController.Get() in C:\Users\joaod\Documents\Git\chama\chama\chama.api\Controllers\CourseController.cs:line 35
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-09-02T16:36:48.9158701-03:00 0HLGH1DKDGQBR:00000001 [INF] Request finished in 6654.6115ms 500 text/html; charset=utf-8 (791a596a)
+2018-09-02T16:37:26.1833831-03:00 0HLGH1E1GCGUM:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:39050/  0 (ca22a1cb)
+2018-09-02T16:37:26.1833831-03:00 0HLGH1E1GCGUN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:37:26.2767368-03:00 0HLGH1E1GCGUM:00000001 [INF] Request finished in 82.5386ms 200  (791a596a)
+2018-09-02T16:37:26.6597313-03:00 0HLGH1E1GCGUN:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T16:37:27.0791110-03:00 0HLGH1E1GCGUN:00000001 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T16:37:28.8550703-03:00 0HLGH1E1GCGUN:00000001 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T16:37:30.2107638-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[CourseID], [i].[Description], [i].[LecturerID], [i].[MaxSeats], [i].[Name], [i.Lecturer].[LecturerID], [i.Lecturer].[Name]
+FROM [COURSE] AS [i]
+INNER JOIN [LECTURER] AS [i.Lecturer] ON [i].[LecturerID] = [i.Lecturer].[LecturerID]
+ORDER BY [i].[CourseID]" (0723d8ff)
+2018-09-02T16:37:30.5222839-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i.CourseStudent].[CourseID], [i.CourseStudent].[StudentID]
+FROM [COURSE_STUDENT] AS [i.CourseStudent]
+INNER JOIN (
+    SELECT DISTINCT [i0].[CourseID]
+    FROM [COURSE] AS [i0]
+    INNER JOIN [LECTURER] AS [i.Lecturer0] ON [i0].[LecturerID] = [i.Lecturer0].[LecturerID]
+) AS [t] ON [i.CourseStudent].[CourseID] = [t].[CourseID]
+ORDER BY [t].[CourseID]" (0723d8ff)
+2018-09-02T16:37:30.8056863-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:30.8508551-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:30.8661143-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:30.8883579-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3799.1858ms. (50a9e262)
+2018-09-02T16:37:30.9093904-03:00 0HLGH1E1GCGUN:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T16:37:31.0294499-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.0858063-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.0999153-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.1335028-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.1966457-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2133230-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2264214-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2424635-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2576864-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2731387-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2835167-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.2980018-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.3297396-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.3484254-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:31.4643066-03:00 0HLGH1E1GCGUN:00000001 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 4786.5046ms (afa2e885)
+2018-09-02T16:37:31.7458006-03:00 0HLGH1E1GCGUN:00000001 [INF] Request finished in 5356.5096ms 200 application/json; charset=utf-8 (791a596a)
+2018-09-02T16:37:39.1954914-03:00 0HLGH1E1GCGUM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:39050/api/course   (ca22a1cb)
+2018-09-02T16:37:39.2024149-03:00 0HLGH1E1GCGUM:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Course\"}". Executing action "chama.api.Controllers.CourseController.Get (chama.api)" (a44c0341)
+2018-09-02T16:37:39.2224923-03:00 0HLGH1E1GCGUM:00000002 [INF] Executing action method "chama.api.Controllers.CourseController.Get (chama.api)" - Validation state: Valid (dad538d7)
+2018-09-02T16:37:39.2447269-03:00 0HLGH1E1GCGUM:00000002 [INF] Entity Framework Core "2.1.2-rtm-30932" initialized '"ChamaContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "using lazy-loading proxies " (9958f5bb)
+2018-09-02T16:37:39.2621732-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[CourseID], [i].[Description], [i].[LecturerID], [i].[MaxSeats], [i].[Name], [i.Lecturer].[LecturerID], [i.Lecturer].[Name]
+FROM [COURSE] AS [i]
+INNER JOIN [LECTURER] AS [i.Lecturer] ON [i].[LecturerID] = [i.Lecturer].[LecturerID]
+ORDER BY [i].[CourseID]" (0723d8ff)
+2018-09-02T16:37:39.2740406-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i.CourseStudent].[CourseID], [i.CourseStudent].[StudentID]
+FROM [COURSE_STUDENT] AS [i.CourseStudent]
+INNER JOIN (
+    SELECT DISTINCT [i0].[CourseID]
+    FROM [COURSE] AS [i0]
+    INNER JOIN [LECTURER] AS [i.Lecturer0] ON [i0].[LecturerID] = [i.Lecturer0].[LecturerID]
+) AS [t] ON [i.CourseStudent].[CourseID] = [t].[CourseID]
+ORDER BY [t].[CourseID]" (0723d8ff)
+2018-09-02T16:37:39.2994918-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.3146900-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.3351429-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[StudentID], [e].[Age], [e].[Name]
+FROM [STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.3565848-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed action method "chama.api.Controllers.CourseController.Get (chama.api)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 128.7313ms. (50a9e262)
+2018-09-02T16:37:39.3655283-03:00 0HLGH1E1GCGUM:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[chama.api.Models.CourseModel, chama.api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2018-09-02T16:37:39.3750938-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.3861467-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.3985592-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4078904-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4164428-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4309461-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4422918-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4546421-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[StudentID]
+FROM [COURSE_STUDENT] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4707894-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[CourseID], [e].[Description], [e].[LecturerID], [e].[MaxSeats], [e].[Name]
+FROM [COURSE] AS [e]
+WHERE [e].[LecturerID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.4857303-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.5024221-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.5135909-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.5372896-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[StudentID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.5496544-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[QueueID], [e].[CourseID], [e].[StudentID]
+FROM [QUEUE] AS [e]
+WHERE [e].[CourseID] = @__get_Item_0" (0723d8ff)
+2018-09-02T16:37:39.6853751-03:00 0HLGH1E1GCGUM:00000002 [INF] Executed action "chama.api.Controllers.CourseController.Get (chama.api)" in 466.4024ms (afa2e885)
+2018-09-02T16:37:39.7380379-03:00 0HLGH1E1GCGUM:00000002 [INF] Request finished in 501.1389ms 200 application/json; charset=utf-8 (791a596a)
